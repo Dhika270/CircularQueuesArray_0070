@@ -31,5 +31,18 @@ public:
 
         // 2. Cek apakah antrian kosong
         if (FRONT == -1)
+        {
+            FRONT = 0; // 2.a
+            REAR = 0; // 2.b
+        }
+        else
+        {
+            // Jika REAR berada di posisi terakhir array, Kembali ke awal array
+            if (REAR == max - 1)
+                REAR = 0;
+            else
+                REAR = REAR + 1;
+        }
+        queue_array[REAR]= num;
     }
 }

@@ -149,8 +149,11 @@ int main()
             default:
             {
                 cout << "Invalid option!!" << endl;
+                break;
             }
             }
         }
+        catch (exception &e)
+        
     }
 }
